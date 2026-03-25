@@ -39,6 +39,6 @@ CTF OperationsCTFd setup and configuration
 This lab is intended only for local, educational usE. Vulnerable services are deliberately insecure. Do not expose these containers to public networks.
 
 # Tools
-https://www.docker.com/products/docker-desktop/
-https://learn.microsoft.com/en-us/windows/wsl/install
+* https://www.docker.com/products/docker-desktop/
+* https://learn.microsoft.com/en-us/windows/wsl/install
 
