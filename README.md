@@ -14,15 +14,15 @@ A self‑contained, Docker‑based CTF lab demonstrating common web vulnerabilit
 ## Project Demonstrates
 
 Infrastructure & DevOps
-  -Docker Compose orchestration
-  -Multi‑container application 
-  -Debugging container crashes, dependency issues, and port binding
+  * Docker Compose orchestration
+  * Multi‑container application 
+  * Debugging container crashes, dependency issues, and port binding
 
 Web Security ConceptsSQL Injection 
-  -Server‑Side Request Forgery (SSRF)
-  -Server‑side vs client‑side trust boundaries
-  -Internal‑only endpoints and abuse via SSRF
+  * Server‑Side Request Forgery (SSRF)
+  * Server‑side vs client‑side trust boundaries
+  * Internal‑only endpoints and abuse via SSRF
 
 CTF OperationsCTFd setup and configuration
-  -Admin vs player workflows
-  -Challenge creation, flags, scoring, and validation
+  * Admin vs player workflows
+  * Challenge creation, flags, scoring, and validation
