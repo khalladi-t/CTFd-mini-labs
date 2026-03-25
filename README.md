@@ -26,3 +26,10 @@ Web Security ConceptsSQL Injection
 CTF OperationsCTFd setup and configuration
   * Admin vs player workflows
   * Challenge creation, flags, scoring, and validation
+
+
+## Challenges
+1. Employee Directory Injection
+2. Internal New Fletcher
+
+<img width="759" height="264" alt="image" src="https://github.com/user-attachments/assets/ee174a99-ca4c-45da-99a4-c1773edbef7c" />
