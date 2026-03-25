@@ -1,11 +1,39 @@
-FROM python:3.11-slim
+version: "3.8"
 
-WORKDIR /app
+services:
+  ctfd:
+    image: ctfd/ctfd:latest
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: mysql+pymysql://ctfd:ctfdpass@db/ctfd
+      SECRET_KEY: dev_secret_change_me
+    depends_on:
+      - db
 
-COPY app.py /app/app.py
+  db:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: ctfdroot
+      MYSQL_DATABASE: ctfd
+      MYSQL_USER: ctfd
+      MYSQL_PASSWORD: ctfdpass
+    volumes:
+      - db-data:/var/lib/mysql
 
-RUN pip install --no-cache-dir flask requests
+  web-sql:
+    build: ../challenges/web-sql
+    ports:
+      - "8081:8080"
+    environment:
+      CHALLENGE_FLAG: flag{basic_sqli_2026}
 
-EXPOSE 8080
+  web-ssrf:
+    build: ../challenges/web-ssrf
+    ports:
+      - "8082:8080"
+    environment:
+      CHALLENGE_FLAG: flag{ssrf_devtools_2026}
 
-CMD ["python", "app.py"]
+volumes:
+  db-data:
